@@ -170,7 +170,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ currentUser, onNavigateToGen
                 </Button>
              </motion.div>
         </motion.div>
-      </section>
+     </motion.section>
 
       {/* Features Section */}
       <motion.section
