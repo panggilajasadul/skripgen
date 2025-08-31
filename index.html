@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkripGen 3.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-primary: #6d28d9;
+        --color-accent: #8b5cf6;
+        --color-background: #f9fafb;
+        --color-card: #ffffff;
+        --color-secondary: #f3f4f6;
+        --color-text-primary: #111827;
+        --color-text-secondary: #4b5563;
+        --color-border: #e5e7eb;
+
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --border-radius: 0.5rem; /* 8px */
+        --transition-duration: 200ms;
+      }
+      html.dark {
+        --color-primary: #6d28d9;
+        --color-accent: #8b5cf6;
+        --color-background: #111827;
+        --color-card: #1f2937;
+        --color-secondary: #374151;
+        --color-text-primary: #f9fafb;
+        --color-text-secondary: #9ca3af;
+        --color-border: #374151;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        font-family: 'Inter', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .shadow-custom-sm { box-shadow: var(--shadow-sm); }
+      .shadow-custom-md { box-shadow: var(--shadow-md); }
+      .shadow-custom-lg { box-shadow: var(--shadow-lg); }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+             fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': 'var(--color-primary)',
+              'secondary': 'var(--color-secondary)',
+              'background': 'var(--color-background)',
+              'card': 'var(--color-card)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'accent': 'var(--color-accent)',
+              'border': 'var(--color-border)',
+            },
+            boxShadow: {
+                'custom-sm': 'var(--shadow-sm)',
+                'custom-md': 'var(--shadow-md)',
+                'custom-lg': 'var(--shadow-lg)',
+            },
+            borderRadius: {
+                'custom': 'var(--border-radius)',
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "jspdf": "https://esm.sh/jspdf@^2.5.1",
+    "framer-motion": "https://esm.sh/framer-motion@^11.3.19",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.56.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
